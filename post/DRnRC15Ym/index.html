@@ -9,12 +9,12 @@
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
-    <link rel="stylesheet" href="/media/css/tags.css">
+    <link rel="stylesheet" href="/media/css/post.css">
     <link rel="stylesheet" href="/media/live2d/css/live2d.css" />
     
 </head>
 <body class=" mdui-appbar-with-toolbar  mdui-theme-primary-pink mdui-theme-accent-pink">
-        <header class="mdui-toolbar mdui-color-pink mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide" style="z-index: 1000">
+<header class="mdui-toolbar mdui-color-pink mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide" style="z-index: 1000">
     <a href="javascript:;" mdui-drawer="{target: '#left-drawer',overlay:true}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
     <span class="mdui-typo-title">Chrizy-zjw</span>
     <div class="mdui-toolbar-spacer"></div>
@@ -22,7 +22,7 @@
     <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
 </header>
 
-        <div class="mdui-drawer mdui-color-white mdui-drawer-full-height mdui-drawer-close" id="left-drawer">
+<div class="mdui-drawer mdui-color-white mdui-drawer-full-height mdui-drawer-close" id="left-drawer">
     <ul class="mdui-list">
         <li class="mdui-subheader">菜单</li>
         
@@ -45,39 +45,107 @@
     </ul>
 </div>
 
-        <br>
-        <div class="mdui-container">
-            <div class="mdui-row mdui-row-gapless">
-                <div class="k-container">
-                    <div class="mdui-row">
-                        
-                        <div class="mdui-col mdui-p-a-1">
-                            <article class="archives-list mdui-shadow-15  mdui-hoverable mdui-color-white ">
-                                <a href="https://Chrizy-zjw.github.io/tag/iGpmOVAmg/">
-                                    <div class="mdui-p-a-2">
-                                        <div class="mdui-typo-headline mdui-text-truncate index-list-title mdui-m-b-3 mdui-text-color-theme">最短路径</div>
-                                        <div class="mdui-typo-title mdui-m-t-1 mdui-text-color-blue-grey-200">共有3篇文章</div>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                        
-                        <div class="mdui-col mdui-p-a-1">
-                            <article class="archives-list mdui-shadow-15  mdui-hoverable mdui-color-white ">
-                                <a href="https://Chrizy-zjw.github.io/tag/v_MQGVFPq/">
-                                    <div class="mdui-p-a-2">
-                                        <div class="mdui-typo-headline mdui-text-truncate index-list-title mdui-m-b-3 mdui-text-color-theme">并查集</div>
-                                        <div class="mdui-typo-title mdui-m-t-1 mdui-text-color-blue-grey-200">共有1篇文章</div>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                        
-                    </div>
+<div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+            <article id="post-1270" class="post-1270 post type-post status-publish format-standard hentry category-90 category-129 tag-149">
+                <header class="entry-header">
+                    <h1 class="entry-title">最短路径SPFA算法</h1>
+                    <p class="entry-census">发布于 2020-07-26</p>
+                    <hr>
+                </header>
+                <div class="neko">
+                    <p>SPFA算法很快，时间复杂度为O（ke），适用于稀疏图带有负权边的图。主要通过<a href="https://blog.csdn.net/zbq_tt5/article/details/89681404">邻接表</a>和队列实现。<br>
+代码</p>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+const int N=1e5+10;
+int n,m,h[N],e[N],ne[N],dist[N],w[N],idx;
+bool st[N];
+void add(int a,int b,int c)
+{
+	e[idx]=b;w[idx]=c;ne[idx]=h[a];h[a]=idx++;
+}
+void Spfa()
+{
+	memset(dist,0x3f,sizeof dist);
+	dist[1]=0;
+	queue&lt;int&gt; q;
+	q.push(1);
+	st[1]=true;
+	while(!q.empty())
+	{
+		int t=q.front();
+		q.pop();
+		st[t]=false;
+		for(int i=h[t];i!=-1;i=ne[i])
+		{
+			int j=e[i];
+			if(dist[j]&gt;dist[t]+w[i])
+			{
+				dist[j]=dist[t]+w[i];
+				if(!st[j])
+				{
+					q.push(j);
+					st[j]=true;	
+				}	
+			}	
+		}	
+	}
+}
+int main()
+{
+	cin&gt;&gt;n&gt;&gt;m;
+	memset(h,-1,sizeof h);
+	while(m--)
+	{
+		int a,b,c;
+		cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;
+		add(a,b,c);
+	}
+	Spfa();
+	if(dist[n]==0x3f3f3f3f) cout&lt;&lt;&quot;impossible&quot;;
+	else cout&lt;&lt;dist[n];
+	return 0;
+}
+————————————————
+版权声明：本文为CSDN博主「user_qym」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/user_qym/java/article/details/104107107
+</code></pre>
+
                 </div>
+            </article>
+        </main>
+    </div>
+    <div class="doc-footer-nav mdui-color-theme">
+        <div class="mdui-container">
+            <div class="mdui-row">
+                
+                <a href="https://Chrizy-zjw.github.io/post/brFNSnPUT/" class="mdui-ripple mdui-color-theme mdui-col-xs-2 mdui-col-sm-6 doc-footer-nav-left">
+                    <div class="doc-footer-nav-text">
+                        <i class="mdui-icon material-icons">arrow_back</i>
+                        <span class="doc-footer-nav-direction mdui-hidden-xs-down">上一篇文章</span>
+                        <div class="doc-footer-nav-chapter mdui-hidden-xs-down">最短路径Bellman-Ford</div>
+                    </div>
+                </a>
+                
+                
+                <a href="https://Chrizy-zjw.github.io/post/SqDPlsHCg/" class="mdui-ripple mdui-color-theme mdui-col-xs-10 mdui-col-sm-6 doc-footer-nav-right">
+                    <div class="doc-footer-nav-text">
+                        <i class="mdui-icon material-icons">arrow_forward</i>
+                        <span class="doc-footer-nav-direction">下一篇文章</span>
+                        <div class="doc-footer-nav-chapter">并查集</div>
+                    </div>
+                </a>
+                
             </div>
         </div>
-        <footer class="mdui-container footer ">
+    </div>
+    <br>
+    
+    <div class="comment"></div>
+</div>
+<footer class="mdui-container footer ">
     <div class="head_card-offset"></div>
     <div class="mdui-row mdui-row-gapless">
         <div class="k-container">
@@ -127,4 +195,25 @@
 
 </body>
 <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    $('.comment').bind('DOMNodeInserted',()=>{
+        $('.comment').unbind()
+
+        $('.vbtn').addClass(' mdui-btn mdui-color-theme-accent mdui-ripple')
+    })
+
+    let valine = new Valine({
+        el: '.comment',
+        
+        
+        
+        placeholder: '欢迎来到我的博客',
+        
+        path: window.location.pathname,
+        pageSize: 30,
+        avatar:'mm',
+        notify:true
+    })
+</script>
 </html>
