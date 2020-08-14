@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Chrizy-zjw.github.io</id>
-    <title>Chrizy-zjw&apos;s blog</title>
-    <updated>2020-08-14T12:52:40.402Z</updated>
+    <title>鸡娃的博客</title>
+    <updated>2020-08-14T13:18:51.044Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Chrizy-zjw.github.io"/>
     <link rel="self" href="https://Chrizy-zjw.github.io/atom.xml"/>
     <subtitle>朱心义喜欢舒子涵</subtitle>
     <logo>https://Chrizy-zjw.github.io/images/avatar.png</logo>
     <icon>https://Chrizy-zjw.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Chrizy-zjw&apos;s blog</rights>
+    <rights>All rights reserved 2020, 鸡娃的博客</rights>
     <entry>
         <title type="html"><![CDATA[最短路径Floyed]]></title>
         <id>https://Chrizy-zjw.github.io/post/1jskdODXs/</id>
