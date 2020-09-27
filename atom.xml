@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://Chrizy-zjw.github.io</id>
+    <id>https://https://Chrizy-zjw.github.io</id>
     <title>鸡娃的博客</title>
-    <updated>2020-08-16T14:42:08.522Z</updated>
+    <updated>2020-09-27T13:34:52.187Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://Chrizy-zjw.github.io"/>
-    <link rel="self" href="https://Chrizy-zjw.github.io/atom.xml"/>
+    <link rel="alternate" href="https://https://Chrizy-zjw.github.io"/>
+    <link rel="self" href="https://https://Chrizy-zjw.github.io/atom.xml"/>
     <subtitle>朱心义喜欢舒子涵</subtitle>
-    <logo>https://Chrizy-zjw.github.io/images/avatar.png</logo>
-    <icon>https://Chrizy-zjw.github.io/favicon.ico</icon>
+    <logo>https://https://Chrizy-zjw.github.io/images/avatar.png</logo>
+    <icon>https://https://Chrizy-zjw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 鸡娃的博客</rights>
     <entry>
         <title type="html"><![CDATA[最短路径Floyed]]></title>
-        <id>https://Chrizy-zjw.github.io/post/1jskdODXs/</id>
-        <link href="https://Chrizy-zjw.github.io/post/1jskdODXs/">
+        <id>https://https://Chrizy-zjw.github.io/post/1jskdODXs/</id>
+        <link href="https://https://Chrizy-zjw.github.io/post/1jskdODXs/">
         </link>
         <updated>2020-07-26T01:43:47.000Z</updated>
         <content type="html"><![CDATA[<h1 id="最短路径算法floyed算法">最短路径算法（Floyed算法）</h1>
@@ -256,8 +256,8 @@ dis[u][v]=0x7ffffff//无边相接时，赋值无穷大
     </entry>
     <entry>
         <title type="html"><![CDATA[最短路径Bellman-Ford]]></title>
-        <id>https://Chrizy-zjw.github.io/post/brFNSnPUT/</id>
-        <link href="https://Chrizy-zjw.github.io/post/brFNSnPUT/">
+        <id>https://https://Chrizy-zjw.github.io/post/brFNSnPUT/</id>
+        <link href="https://https://Chrizy-zjw.github.io/post/brFNSnPUT/">
         </link>
         <updated>2020-07-26T01:43:08.000Z</updated>
         <content type="html"><![CDATA[<p>这个算法通过边的松弛来做即判断dis[u[i]]+w[i]是否比dis[v[i]]小。代码如下。</p>
@@ -302,8 +302,8 @@ if(vis==1) cout&lt;&lt;&quot;有负权回路&quot;；
     </entry>
     <entry>
         <title type="html"><![CDATA[最短路径SPFA算法]]></title>
-        <id>https://Chrizy-zjw.github.io/post/DRnRC15Ym/</id>
-        <link href="https://Chrizy-zjw.github.io/post/DRnRC15Ym/">
+        <id>https://https://Chrizy-zjw.github.io/post/DRnRC15Ym/</id>
+        <link href="https://https://Chrizy-zjw.github.io/post/DRnRC15Ym/">
         </link>
         <updated>2020-07-26T01:42:26.000Z</updated>
         <content type="html"><![CDATA[<p>SPFA算法很快，时间复杂度为O（ke），适用于稀疏图带有负权边的图。主要通过<a href="https://blog.csdn.net/zbq_tt5/article/details/89681404">邻接表</a>和队列实现。<br>
@@ -367,8 +367,8 @@ int main()
     </entry>
     <entry>
         <title type="html"><![CDATA[并查集]]></title>
-        <id>https://Chrizy-zjw.github.io/post/SqDPlsHCg/</id>
-        <link href="https://Chrizy-zjw.github.io/post/SqDPlsHCg/">
+        <id>https://https://Chrizy-zjw.github.io/post/SqDPlsHCg/</id>
+        <link href="https://https://Chrizy-zjw.github.io/post/SqDPlsHCg/">
         </link>
         <updated>2020-07-26T01:40:46.000Z</updated>
         <content type="html"><![CDATA[<h1 id="并查集是什么">并查集是什么？</h1>
